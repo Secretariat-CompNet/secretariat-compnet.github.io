@@ -78,6 +78,9 @@
     .title { display: block; font-weight: 600; color: var(--navy); }
     .desc { display: block; font-size: .9rem; color: var(--muted); }
     .arrow { color: var(--blue); flex: 0 0 auto; }
+    .sublinks { margin: 6px 0 0 22px; font-size: .85rem; color: var(--muted); }
+    .sublinks a { color: var(--blue); }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .95em; }
     footer {
       border-top: 1px solid var(--border);
       padding: 24px 16px 32px;
@@ -155,6 +158,37 @@
           </span>
           <span class="arrow" aria-hidden="true">→</span>
         </a>
+      </li>
+    </ul>
+
+    <p class="section-label">R packages</p>
+    <ul class="links">
+      <li>
+        <a class="card" href="https://CRAN.R-project.org/package=mditools">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>
+          </span>
+          <span class="text">
+            <span class="title"><code>mditools</code></span>
+            <span class="desc">Tools for research on harmonized firm-level microdata · CRAN</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="sublinks"><a href="https://github.com/Secretariat-CompNet/mditools">Source on GitHub</a></p>
+      </li>
+      <li>
+        <!-- Point href at https://CRAN.R-project.org/package=mdiharmonize once accepted, and swap the sublink to GitHub -->
+        <a class="card" href="https://github.com/Secretariat-CompNet/mdiharmonize">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>
+          </span>
+          <span class="text">
+            <span class="title"><code>mdiharmonize</code></span>
+            <span class="desc">Harmonize confidential firm-level microdata into a common format · GitHub</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="sublinks">CRAN release pending</p>
       </li>
     </ul>
   </main>
