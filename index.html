@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CompNet MDI</title>
+  <meta name="description" content="Manual and interactive tools for CompNet's Micro Data Infrastructure (MDI).">
+  <style>
+    :root {
+      --navy: #0030a0;          /* IWH-CompNet wordmark */
+      --blue: #00a0d8;          /* logo cube, light face */
+      --blue-tint: #dceefa;
+      --grey: #384040;          /* logo tagline */
+      --bg: #ffffff;
+      --card: #ffffff;
+      --text: #1d2733;
+      --muted: #5b6673;
+      --border: #dde5ee;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .band { height: 6px; background: var(--blue); }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 32px 16px 32px;
+    }
+    header { background: #fff; padding: 40px 16px 8px; }
+    .logo { display: block; width: 100%; max-width: 340px; height: auto; margin: 0 auto; }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      color: var(--navy);
+      font-size: 1.9rem;
+      line-height: 1.2;
+      text-align: center;
+      margin: 0 0 8px;
+    }
+    .lede { text-align: center; color: var(--muted); margin: 0 0 32px; }
+    .section-label {
+      font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--grey); margin: 28px 0 10px;
+    }
+    ul.links { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    a.card {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      color: inherit; text-decoration: none;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    a.card:hover, a.card:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(11, 58, 102, .12);
+      border-left-color: var(--navy);
+      outline: none;
+    }
+    .icon {
+      flex: 0 0 40px; height: 40px; border-radius: 8px;
+      background: var(--blue-tint); color: var(--navy);
+      display: grid; place-items: center;
+    }
+    .icon svg { width: 22px; height: 22px; }
+    .text { flex: 1; min-width: 0; }
+    .title { display: block; font-weight: 600; color: var(--navy); }
+    .desc { display: block; font-size: .9rem; color: var(--muted); }
+    .arrow { color: var(--blue); flex: 0 0 auto; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 16px 32px;
+      text-align: center;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--blue); }
+    footer img { display: block; height: 44px; width: auto; margin: 16px auto 0; }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1722;
+        --card: #172232;
+        --text: #e4ebf2;
+        --muted: #9fb0c2;
+        --border: #263447;
+        --navy: #9cc9ea;
+        --blue-tint: #1f3550;
+        --grey: #8a96a3;
+      }
+      header { padding-bottom: 32px; }
+      footer img { background: #fff; padding: 10px 14px; border-radius: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="band"></div>
+  <header>
+    <img class="logo" src="assets/iwh-compnet-logo.jpg" alt="IWH-CompNet – The Competitiveness Research Network, part of IWH-CBPD">
+  </header>
+  <main>
+
+    <h1>Micro Data Infrastructure</h1>
+    <p class="lede">Documentation and interactive tools for researchers writing MDI modules.</p>
+
+    <p class="section-label">Documentation</p>
+    <ul class="links">
+      <li>
+        <a class="card" href="https://secretariat-compnet.github.io/manual/">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+          </span>
+          <span class="text">
+            <span class="title">MDI Manual</span>
+            <span class="desc">How the MDI works and how to write and test a module</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="section-label">Interactive tools</p>
+    <ul class="links">
+      <li>
+        <a class="card" href="https://compnet.shinyapps.io/mdi_metadata_tool_catalog_viewer_shiny/">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <span class="text">
+            <span class="title">MDI Metadata Viewer</span>
+            <span class="desc">Which MD variables exist in which country and year</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="https://compnet.shinyapps.io/datafiles_info_viewer/">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+          </span>
+          <span class="text">
+            <span class="title">Datafiles Info Viewer</span>
+            <span class="desc">Source, firm sample and details of the NSI datafiles behind each MD panel</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    The MDI is run by <a href="https://www.comp-net.org/">IWH-CompNet</a>, the Competitiveness Research Network.
+    <img src="assets/eu-funded.png" alt="Funded by the European Union">
+  </footer>
+</body>
+</html>
